@@ -1,40 +1,27 @@
-const symbols = ['🧛', '🧛‍♀️', '🩸', '🦇', '🧄', '⚰️'];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Bonanza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Blood Bank Bonanza</h1>
+    
+    <!-- Display the slot machine reels -->
+    <div>
+        <span id="reel1" class="reel"></span>
+        <span id="reel2" class="reel"></span>
+        <span id="reel3" class="reel"></span>
+    </div>
+    
+    <!-- The "Spin the Coffin" Button -->
+    <button id="spinButton">Spin the Coffin</button>
 
-// Function to perform the spin and update the reels
-function spin() {
-  const reel1 = document.getElementById('reel1');
-  const reel2 = document.getElementById('reel2');
-  const reel3 = document.getElementById('reel3');
-  const result = document.getElementById('result');
+    <!-- Display the result of the spin -->
+    <div id="result"></div>
 
-  // Select random symbols for each reel
-  const s1 = symbols[Math.floor(Math.random() * symbols.length)];
-  const s2 = symbols[Math.floor(Math.random() * symbols.length)];
-  const s3 = symbols[Math.floor(Math.random() * symbols.length)];
-
-  // Update the text content of each reel
-  reel1.textContent = s1;
-  reel2.textContent = s2;
-  reel3.textContent = s3;
-
-  // Check if the reels match
-  if (s1 === s2 && s2 === s3) {
-    result.textContent = '🧛 JACKPOT! You drained the bank! 🧛';
-  } else if (s1 === s2 || s2 === s3 || s1 === s3) {
-    result.textContent = '🦇 Nice bite! Partial match.';
-  } else {
-    result.textContent = '💀 No blood for you... try again!';
-  }
-}
-
-// Ensure the button works after the page has fully loaded
-window.onload = function() {
-  // Select the "Spin the Coffin" button by its ID
-  const spinButton = document.getElementById('spinButton');
-  
-  // Check if the button exists
-  if (spinButton) {
-    // Add a click event listener to trigger the spin function
-    spinButton.addEventListener('click', spin);
-  }
-};
+    <script src="script.js"></script>
+</body>
+</html>
