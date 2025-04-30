@@ -25,3 +25,17 @@
     <script src="script.js"></script>
 </body>
 </html>
+console.log("Page Loaded");
+
+window.onload = function() {
+  console.log("Spin Button Loaded");
+
+  const spinButton = document.getElementById('spinButton');
+  if (spinButton) {
+    console.log("Button Found!");
+    spinButton.addEventListener('click', function() {
+      console.log("Spin Button Clicked");
+      spin();
+    });
+  }
+};
