@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Bank Bonanza</title>
-    <!-- Link to style.css file -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Bank Bonanza</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>Blood Bank Bonanza</h1>
-        <div class="slots">
-            <div class="slot">🧛‍♂️</div>
-            <div class="slot">🩸</div>
-            <div class="slot">🦇</div>
-        </div>
-        <button id="spinButton">Spin the Coffin</button>
-    </div>
+  <h1>Blood Bank Bonanza</h1>
+  
+  <!-- The reels that will display symbols -->
+  <div>
+    <span id="reel1" class="reel">🧛</span>
+    <span id="reel2" class="reel">🧛‍♀️</span>
+    <span id="reel3" class="reel">🩸</span>
+  </div>
 
-    <!-- Link to script.js file -->
-    <script src="script.js"></script>
+  <!-- Spin button -->
+  <button id="spinButton">Spin the Coffin</button>
+
+  <!-- Result display -->
+  <div id="result"></div>
+
+  <!-- Link to the script.js file -->
+  <script src="script.js"></script>
 </body>
 </html>
